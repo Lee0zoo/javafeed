@@ -9,6 +9,7 @@ import com.sparta.javafeed.exception.CustomException;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Random;
 
 @Service
+@Setter
 @RequiredArgsConstructor
 public class EmailService {
     private final JavaMailSender emailSender;
