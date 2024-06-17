@@ -16,7 +16,6 @@ public class NewsfeedRequestDto {
     private String description;
     @Size(min = 1, max = 5, message = "최대 5개까지만 업로드 가능합니다.")
     private List<MultipartFile> files;
-
     public Newsfeed toEntity(User user) {
         return new Newsfeed(this.title, this.description, user);
     }
